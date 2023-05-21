@@ -96,7 +96,7 @@ void *insert_node(Node *node,int item)
 }
 
 
-void print_linked_list(Node *node)
+void print_linked_list(Node *head)
 {
 
     Node *current_node=head;
