@@ -79,11 +79,52 @@ Node *create_tree()
     return two; // root node
 }
 
+void pre_order(Node *node)
+{
+
+    cout<<node->data<<' ';
+
+    if(node->left!=NULL)
+    {
+        pre_order(node->left);
+    }
+
+    if(node->right!=NULL)
+    {
+        pre_order(node->right);
+    }
+
+
+}
+
+void post_order(Node *node)
+{
+
+    if(node->left!=NULL)
+    {
+        post_order(node->left);
+    }
+
+    if(node->right!=NULL)
+    {
+        post_order(node->right);
+    }
+
+    cout<<node->data<<' ';
+
+
+}
+
 int main()
 {
 
     Node *root=create_tree();
-    cout<<root->data<<endl;
+
+    pre_order(root);
+    cout<<endl;
+
+    post_order(root);
+    cout<<endl;
 
 
 
