@@ -114,6 +114,20 @@ void post_order(Node *node)
 
 
 }
+void in_order(Node *node)
+{
+
+    if(node->left!=NULL)
+    {
+        in_order(node->left);
+    }
+    cout<<node->data<<' ';
+
+    if(node->right!=NULL)
+    {
+        in_order(node->right);
+    }
+}
 
 int main()
 {
@@ -124,6 +138,9 @@ int main()
     cout<<endl;
 
     post_order(root);
+    cout<<endl;
+
+    in_order(root);
     cout<<endl;
 
 
